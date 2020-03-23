@@ -18,6 +18,7 @@ node ('master') {
 	'''
 	}
  stage ('SAST Sonar') {
+	withMaven(maven: 'Maven_3.6.3'){
 	sh '''
 	mvn  org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar \
 	-Dsonar.host.url=http://ci-jenkins.cloudhands.online/ \
@@ -25,5 +26,6 @@ node ('master') {
 	-Dsonar.projectKey=Sast-for-JavaApp	
 	'''
 	}
+    }
 } 
 	
