@@ -25,7 +25,7 @@ node ('master') {
 	mvn clean install
 	mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar \
 	-Dsonar.host.url=http://ci-jenkins.cloudhands.online/ \
-	-Dsonar.login=c4340e520f9802c0137132d5e48905f140dba8a7	
+	-Dsonar.login=c4340e520f9802c0137132d5e48905f140dba8a7 \	
 	-Dsonar.projectKey=Sast-for-JavaApp	
 	'''
 	}
