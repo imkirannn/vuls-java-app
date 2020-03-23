@@ -12,7 +12,7 @@ node ('master') {
  stage ('Source Composition Analysis') {
 	sh '''
 	rm owasp* || true
-	wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh
+	wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh"
 	chmod +x owasp-dependency-check.sh && bash owasp-dependency-check.sh
 	cp -rv /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml ~/OWASP
 	'''
