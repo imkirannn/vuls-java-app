@@ -76,7 +76,7 @@
                         <path>/</path>
                     </configuration>
 	    </plugin>
-	    <!--plugin>
+	    <plugin>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.7.7.201606060606</version>
@@ -111,7 +111,7 @@
             </configuration>
         </execution>
     </executions>
-</plugin-->
+</plugin>
             </plugins>
         </pluginManagement>
     </build>
