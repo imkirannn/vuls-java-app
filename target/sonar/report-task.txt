@@ -1,0 +1,6 @@
+projectKey=io.github.snyk:todolist-mvc
+serverUrl=http://ci-jenkins.cloudhands.online
+serverVersion=7.7.0.23042
+dashboardUrl=http://ci-jenkins.cloudhands.online/dashboard?id=io.github.snyk%3Atodolist-mvc
+ceTaskId=AXEIA9abMZGbL8oU3IkP
+ceTaskUrl=http://ci-jenkins.cloudhands.online/api/ce/task?id=AXEIA9abMZGbL8oU3IkP
