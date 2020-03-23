@@ -25,5 +25,5 @@ node ('master') {
 	-Dsonar.projectKey=Sast-for-JavaApp	
 	'''
 	}
- 
+} 
 	
