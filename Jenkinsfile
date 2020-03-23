@@ -10,6 +10,7 @@ node ('master') {
         checkout scm
     }
  stage ('Source Composition Analysis') {
+	catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
 	sh '''
 	rm owasp* || true
 	wget "https://raw.githubusercontent.com/cehkunal/webapp/master/owasp-dependency-check.sh"
@@ -17,6 +18,7 @@ node ('master') {
 	cp -rv /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.html ~/OWASP
 	'''
 	}
+ }
  stage ('SAST Sonar') {
 	withMaven(maven: 'Maven_3.6.3'){
 	sh '''
