@@ -77,28 +77,29 @@
                         <path>/</path>
                     </configuration>
 	    </plugin>
+    </plugins>
+    </build>
+    <profiles>
+    <profile>
+      <id>sonar-coverage</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
 	    <plugin>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.7.9</version>
-    <executions>
-        <execution>
-            <goals>
-                <goal>prepare-agent</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>report</id>
-            <phase>prepare-package</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>jacoco-check</id>
-            <goals>
-                <goal>check</goal>
-            </goals>
+    <version>0.8.5</version>
+
+          </plugin>
+  </plugins>
+  </pluginManagement>
+   <plugins>
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
             <configuration>
               <append>true</append>
             </configuration>
