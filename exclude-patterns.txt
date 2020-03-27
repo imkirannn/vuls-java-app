@@ -1,4 +1,6 @@
 (.*/)?\.classpath$
 .*\.jmx$
-(.*/)?test/(.*/)?resources
-(.*/)?src/resources/*.properties
+(.*/)?test/(.*/)?resources/
+(.*/)?attacker-app/
+Jenkinsfile
+(?i).*\.(properties|conf|ini|txt|y(a)?ml)$

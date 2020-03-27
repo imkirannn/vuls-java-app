@@ -1,14 +1,15 @@
 node ('master') {
+  stage('Clone repository') {
+        checkout scm
+    }
+
   stage('Check-Git-Secrets') {
 	sh '''
 	rm trufflehog || true
-        trufflehog --exclude_paths exclude-patterns.txt --json https://github.com/imkirannn/webapp.git > trufflehog
+        trufflehog --exclude_paths exclude-patterns.txt --regex https://github.com/imkirannn/vuls-java-app.git > trufflehog
         cat trufflehog
 	'''
 	}
- stage('Clone repository') {
-        checkout scm
-    }
  stage ('Source Composition Analysis') {
 	catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
 	sh '''
