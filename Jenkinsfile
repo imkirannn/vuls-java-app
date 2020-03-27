@@ -2,7 +2,7 @@ node ('master') {
   stage('Check-Git-Secrets') {
 	sh '''
 	rm trufflehog || true
-        docker run gesellix/trufflehog --json https://github.com/imkirannn/webapp.git > trufflehog
+        trufflehog --exclude_paths exclude-patterns.txt --json https://github.com/imkirannn/webapp.git > trufflehog
         cat trufflehog
 	'''
 	}
