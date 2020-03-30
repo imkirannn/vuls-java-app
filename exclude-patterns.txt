@@ -3,4 +3,5 @@
 (.*/)?test/(.*/)?resources/
 (.*/)?attacker-app/
 Jenkinsfile
-(?i).*\.(properties|conf|ini|txt|y(a)?ml)$
+#(?i).*\.(properties|conf|ini|txt|y(a)?ml)$
+#src/resources/application.properties
