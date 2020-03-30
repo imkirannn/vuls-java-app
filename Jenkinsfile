@@ -5,9 +5,7 @@ node ('master') {
 
   stage('Check-Git-Secrets') {
 	sh '''
-	rm trufflehog || true
         trufflehog --exclude_paths exclude-patterns.txt --regex https://github.com/imkirannn/vuls-java-app.git > trufflehog
-        cat trufflehog
 	'''
 	}
  stage ('Source Composition Analysis') {
