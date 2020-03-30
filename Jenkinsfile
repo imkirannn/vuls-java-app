@@ -4,9 +4,9 @@ ansiColor('xterm') {
         checkout scm
     }
     
-    stage('Check-Git-Secrets') {
-     	sh "trufflehog --exclude_paths exclude-patterns.txt --regex https://github.com/imkirannn/vuls-java-app.git"
-	}
+   // stage('Check-Git-Secrets') {
+   //  	sh "trufflehog --exclude_paths exclude-patterns.txt --regex https://github.com/imkirannn/vuls-java-app.git"
+//	}
 
 
  stage ('Source Composition Analysis') {
